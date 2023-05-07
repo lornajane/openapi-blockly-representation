@@ -1,0 +1,157 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "openapi_summary",
+        "id": "ZDnzSINV(x1tszDy!P0v",
+        "x": 605,
+        "y": 49,
+        "next": {
+          "block": {
+            "type": "info_summary",
+            "id": "c2vOX;B@ydjfZ5(#_%Q1",
+            "next": {
+              "block": {
+                "type": "security_summary",
+                "id": "1[o})F}5=7=1fG0zi.rz",
+                "next": {
+                  "block": {
+                    "type": "servers_summary",
+                    "id": "]/?G3J,0d:*5R]snKv8g",
+                    "next": {
+                      "block": {
+                        "type": "tags_summary",
+                        "id": "`Is=YgK6~(GwqvX+;a0y",
+                        "next": {
+                          "block": {
+                            "type": "paths_summary",
+                            "id": "]8!rq9=85pgVT1$LX/[3",
+                            "next": {
+                              "block": {
+                                "type": "webhooks_summary",
+                                "id": "f4`-hUQ#n7l5hnfT0sNx",
+                                "next": {
+                                  "block": {
+                                    "type": "components_summary",
+                                    "id": "p;J*A/l~9Gccgb2%8qM{"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "openapi",
+        "id": "3w?A/)$7c;QN?,`ZnzGF",
+        "x": 278,
+        "y": 204,
+        "fields": {
+          "OPENAPI_VERSION": "3.1.0"
+        },
+        "next": {
+          "block": {
+            "type": "info",
+            "id": "X;e}d5nlfcw~.)o|!y!I",
+            "inputs": {
+              "INFO": {
+                "block": {
+                  "type": "title",
+                  "id": "xV:LM.(D$pb+cysnuf7]",
+                  "fields": {
+                    "INFO_TITLE": "Excellent API"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "summary",
+                      "id": ",jhMOO|,b6-=z%/XZ.So",
+                      "fields": {
+                        "SUMMARY": "An API for Excellence"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "description",
+                          "id": "aEr:ud`W`U~t,Dz2PrvP",
+                          "fields": {
+                            "DESCRIPTION": "This API is modern, and will make your applications 67% more excellent.\n Write many words as you like here, markup is also supported."
+                          },
+                          "next": {
+                            "block": {
+                              "type": "version",
+                              "id": "OD~Ly(]8A~wX,vZDoH+F",
+                              "fields": {
+                                "INFO_VERSION": "1.0.0"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "license",
+                                  "id": "o:F/`85VTLGJC4sYX4Il",
+                                  "fields": {
+                                    "INFO_LICENSE_NAME": "Apache 2",
+                                    "INFO_LICENSE_SPDX": "ITEM1"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "paths",
+                "id": "_1oX-oclDy-J]F7=p-h2",
+                "inputs": {
+                  "PATHS": {
+                    "block": {
+                      "type": "path_item",
+                      "id": "8ANd1-GXd}9$FtXa*)8|",
+                      "fields": {
+                        "PATH_ITEM": "/item/url/endpoint"
+                      },
+                      "inputs": {
+                        "PATH_ITEMS": {
+                          "block": {
+                            "type": "operation",
+                            "id": "$,]8s|#CRiz8RLKsI!w#",
+                            "fields": {
+                              "OPERATION_METHOD": "ITEM1"
+                            },
+                            "inputs": {
+                              "Operation": {
+                                "block": {
+                                  "type": "description",
+                                  "id": "A^I43f1He_OuDa;Z9q4d",
+                                  "fields": {
+                                    "DESCRIPTION": "This API is modern, and will make your applications 67% more excellent.\n Write many words as you like here, markup is also supported."
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

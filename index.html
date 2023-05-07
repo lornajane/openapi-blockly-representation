@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>OpenAPI in Blocks</title>
+
+  <script src="./node_modules/blockly/blockly_compressed.js"></script>
+  <script src="./node_modules/blockly/blocks_compressed.js"></script>
+  <script src="./node_modules/blockly/msg/en.js"></script>
+  <style>
+    body {
+      background-color: #ffd;
+      font-family: sans-serif;
+    }
+    h1 {
+      font-weight: normal;
+      font-size: 140%;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="blocklyDiv" style="height: 600px; width: 800px;"></div>
+
+  <script>
+
+    // overview builders
+    Blockly.Blocks['openapi_summary'] = {
+      init: function() {
+        this.setNextStatement(true);  // Enable next connector
+        this.setOutput(false);        // Disable output connector
+        this.setColour(90);          // Set block color
+        
+        this.appendDummyInput()
+            .appendField("openapi");
+      }
+    };
+
+    Blockly.Blocks['info_summary'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(160);          // Set block color
+
+        this.appendDummyInput()
+            .appendField("info");
+
+      }
+    }
+    
+    Blockly.Blocks['tags_summary'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(260);          // Set block color
+
+        this.appendDummyInput()
+            .appendField("tags");
+
+      }
+    }
+    
+    Blockly.Blocks['servers_summary'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(30);          // Set block color
+
+        this.appendDummyInput()
+            .appendField("servers");
+
+      }
+    }
+    
+    Blockly.Blocks['security_summary'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(15);          // Set block color
+
+        this.appendDummyInput()
+            .appendField("security");
+
+      }
+    }
+    
+    Blockly.Blocks['paths_summary'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(220);          // Set block color
+
+        this.appendDummyInput()
+            .appendField("paths");
+
+      }
+    }
+    
+    Blockly.Blocks['webhooks_summary'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(330);          // Set block color
+
+        this.appendDummyInput()
+            .appendField("webhooks");
+
+      }
+    }
+    
+    Blockly.Blocks['components_summary'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(65);          // Set block color
+
+        this.appendDummyInput()
+            .appendField("components");
+
+      }
+    }
+    
+    // main blocks
+    Blockly.Blocks['openapi'] = {
+      init: function() {
+        this.setNextStatement(true);  // Enable next connector
+        this.setOutput(false);        // Disable output connector
+        this.setColour(90);          // Set block color
+        
+        this.appendDummyInput()
+            .appendField("openapi")
+            .appendField(new Blockly.FieldTextInput('3.1.0'), 'OPENAPI_VERSION');
+      }
+    };
+
+    // Info
+    Blockly.Blocks['info'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(160);          // Set block color
+
+        this.appendStatementInput('INFO')
+            .appendField("info");
+
+      }
+    }
+
+    Blockly.Blocks['title'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.appendDummyInput()
+            .appendField("title")
+            .appendField(new Blockly.FieldTextInput('Excellent API'), 'INFO_TITLE');
+      }
+    }
+
+    Blockly.Blocks['summary'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setColour(200);          // Set block color
+
+        this.appendDummyInput()
+            .appendField("summary")
+          .appendField(new Blockly.FieldTextInput('An API for Excellence'), 'SUMMARY');
+      }
+    }
+
+    Blockly.Blocks['description'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setColour(200);          // Set block color
+        this.appendDummyInput()
+            .appendField("description")
+            .appendField(new Blockly.FieldMultilineInput('This API is modern, and will make your applications 67% more excellent.\n Write many words as you like here, markup is also supported.'), 'DESCRIPTION');
+      }
+    }
+
+    Blockly.Blocks['version'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setColour(160);          // Set block color
+        this.appendDummyInput()
+            .appendField("version")
+            .appendField(new Blockly.FieldTextInput('1.0.0'), 'INFO_VERSION');
+      }
+    }
+
+    Blockly.Blocks['license'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setColour(160);          // Set block color
+        this.appendDummyInput()
+            .appendField("license")
+        this.appendDummyInput()
+            .appendField("name")
+            .appendField(new Blockly.FieldTextInput('Apache 2'), 'INFO_LICENSE_NAME');
+        this.appendDummyInput()
+                .appendField('identifier')
+                .appendField(new Blockly.FieldDropdown([
+                    ['Apache-2.0', 'ITEM1'],
+                    ['CC-BY-4.0', 'ITEM2'],
+                    ['GPL-3.0-only', 'ITEM3']
+                ]), 'INFO_LICENSE_SPDX');
+      }
+    }
+
+    Blockly.Blocks['paths'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(220);          // Set block color
+
+        this.appendDummyInput()
+          .appendField("paths");
+        this.appendStatementInput('PATHS');
+
+      }
+    }
+
+    Blockly.Blocks['path_item'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(220);          // Set block color
+
+        this.appendDummyInput()
+          .appendField(new Blockly.FieldTextInput('/item/url/endpoint'), 'PATH_ITEM');
+        this.appendStatementInput('PATH_ITEMS');
+
+      }
+    }
+
+    Blockly.Blocks['operation'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(220);          // Set block color
+
+        this.appendDummyInput()
+                .appendField(new Blockly.FieldDropdown([
+                    ["get", 'ITEM1'],
+                    ["post", 'ITEM2'],
+                    ["put", 'ITEM3'],
+                    ["delete", 'ITEM4']
+                ]), 'OPERATION_METHOD');
+        this.appendStatementInput('Operation');
+
+      }
+    }
+
+    // toolbox is the left hand nav structure
+    var toolbox = {
+        "kind":"categoryToolbox",
+        "contents":[
+          {
+            "kind": "category",
+            "name": "Summaries",
+            "contents": [
+              {
+                "kind": "block",
+                "type": "openapi_summary"
+              },
+              {
+                "kind": "block",
+                "type": "info_summary"
+              },
+              {
+                "kind": "block",
+                "type": "tags_summary"
+              },
+              {
+                "kind": "block",
+                "type": "security_summary"
+              },
+              {
+                "kind": "block",
+                "type": "servers_summary"
+              },
+              {
+                "kind": "block",
+                "type": "paths_summary"
+              },
+              {
+                "kind": "block",
+                "type": "webhooks_summary"
+              },
+              {
+                "kind": "block",
+                "type": "components_summary"
+              }
+            ]
+
+          },
+          {
+            "kind":"sep"
+          },
+          {
+            "kind": "category",
+            "name": "Meta",
+            "contents": [
+              {
+                "kind": "block",
+                "type": "openapi"
+              },
+              {
+                "kind": "block",
+                "type": "info"
+              },
+              {
+                "kind": "block",
+                "type": "title"
+              },
+              {
+                "kind": "block",
+                "type": "summary"
+              },
+              {
+                "kind": "block",
+                "type": "description"
+              },
+              {
+                "kind": "block",
+                "type": "version"
+              },
+              {
+                "kind": "block",
+                "type": "license"
+              }
+            ]
+          },
+          {
+            "kind": "category",
+            "name": "Requests and responses",
+            "contents": [
+              {
+                "kind": "block",
+                "type": "paths"
+              },
+              {
+                "kind": "block",
+                "type": "path_item"
+              },
+              {
+                "kind": "block",
+                "type": "operation"
+              },
+            ]
+          },
+        ]
+      }
+    var apiWorkspace = Blockly.inject('blocklyDiv',
+        {media: './node_modules/blockly/media/',
+         toolbox: toolbox});
+  </script>
+
+<p><a href="#" onClick="exportData()">Click to export/save</a> &nbsp; ~ &nbsp;
+<a href="#" onClick="copy()">Copy from textbox</a> &nbsp; ~ &nbsp;
+<a href="#" onClick="loadTextData()">Load from textbox</a> / 
+<a href="#" onClick="loadStoredData()">Load from storage</a>
+</p>
+
+<textarea id="exportArea" rows="30" cols="88"></textarea>
+
+<script>
+
+function exportData() {
+  console.log("saving data ....");
+  var box = document.getElementById("exportArea");
+  var dataBlocks = Blockly.serialization.workspaces.save(apiWorkspace);
+  console.log(Object.prototype.toString.call(dataBlocks));
+  console.log(dataBlocks);
+  console.log(JSON.stringify(dataBlocks));
+  box.value = JSON.stringify(dataBlocks, null, 2);
+
+  console.log(apiWorkspace);
+  localStorage.setItem("apiWorkspace", JSON.stringify(dataBlocks));
+}
+
+function loadStoredData() {
+  console.log("checking for data ....");
+  var data = localStorage.getItem("apiWorkspace");
+
+  if(data) {
+    console.log("data found");
+    console.log(data);
+    Blockly.serialization.workspaces.load(JSON.parse(data), apiWorkspace);
+  }
+}
+
+function loadTextData() {
+  var box = document.getElementById("exportArea");
+  var data = JSON.parse(box.value);
+  console.log(data);
+  Blockly.serialization.workspaces.load(data, apiWorkspace);
+}
+
+function copy() {
+  console.log("copying");
+  var box = document.getElementById("exportArea");
+  console.log(box.value);
+  navigator.clipboard.writeText(box.value);
+}
+
+// if we've got stored data, just load it
+loadStoredData();
+
+</script>
+
+</body>
+</html>

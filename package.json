@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "blockly": "^9.3.3"
+  },
+  "name": "openapi-blockly",
+  "version": "0.1.0",
+  "description": "Represent OpenAPI structure with Blockly",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lorna Mitchell <github@lornajane.net>",
+  "license": "Apache-2.0",
+  "blocklyDemoConfig": {
+    "title": "Defining the Toolbox",
+    "description": "Organize blocks into categories for the user.",
+    "files": [
+      "index.html",
+      "./node_modules/blockly/*_compressed.js",
+      "./node_modules/blockly/*_compressed.js.map",
+      "./node_modules/blockly/msg/en.js",
+      "./node_modules/blockly/media/*"
+    ]
+  }
+}
