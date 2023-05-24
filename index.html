@@ -198,6 +198,32 @@
       }
     }
 
+    Blockly.Blocks['external_docs'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.appendDummyInput()
+            .appendField("externalDocs")
+        this.appendDummyInput()
+            .appendField("url")
+            .appendField(new Blockly.FieldTextInput('https://example.com/docs'), 'EX_DOCS_URL');
+        this.appendDummyInput()
+            .appendField("description")
+            .appendField(new Blockly.FieldTextInput('What sort of docs'), 'EX_DOCS_DESCRTIPTION');
+      }
+    }
+
+    Blockly.Blocks['version'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setColour(160);          // Set block color
+        this.appendDummyInput()
+            .appendField("version")
+            .appendField(new Blockly.FieldTextInput('1.0.0'), 'INFO_VERSION');
+      }
+    }
+
     Blockly.Blocks['license'] = {
       init: function() {
         this.setPreviousStatement(true); 
@@ -215,6 +241,34 @@
                     ['CC-BY-4.0', 'ITEM2'],
                     ['GPL-3.0-only', 'ITEM3']
                 ]), 'INFO_LICENSE_SPDX');
+      }
+    }
+
+    Blockly.Blocks['tags_list'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(260);          // Set block color
+
+        this.appendDummyInput()
+          .appendField("tags");
+        this.appendStatementInput('TAGS');
+
+      }
+    }
+
+    Blockly.Blocks['tag'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setColour(260);          // Set block color
+        this.appendDummyInput()
+            .appendField("name")
+            .appendField(new Blockly.FieldTextInput('Apache 2'), 'TAG_NAME');
+        this.appendDummyInput()
+            .appendField("description")
+            .appendField(new Blockly.FieldTextInput('Apache 2'), 'TAG_DESCRIPTION');
       }
     }
 
@@ -261,9 +315,160 @@
                     ["delete", 'ITEM4']
                 ]), 'OPERATION_METHOD');
         this.appendStatementInput('Operation');
+      }
+    }
+
+    Blockly.Blocks['operation_id'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.appendDummyInput()
+            .appendField("operation id")
+            .appendField(new Blockly.FieldTextInput('operation-id'), 'OPERATION_ID');
+      }
+    }
+
+    Blockly.Blocks['operation_tags_list'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);
+        this.setColour(260);          // Set block color
+
+	this.appendValueInput('OPERATION_TAGS')
+	    .appendField("tags")
+      }
+    }
+
+    Blockly.Blocks['operation_tag'] = {
+      init: function() {
+        this.setOutput(true);
+        this.setColour(260);          // Set block color
+
+	this.appendValueInput('OPERATION_TAGS')
+            .appendField(new Blockly.FieldTextInput('user'), 'TAG_NAME');
+      }
+    }
+
+    Blockly.Blocks['parameters'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(220);          // Set block color
+
+        this.appendDummyInput()
+          .appendField("parameters");
+        this.appendStatementInput('PARAMETERS');
 
       }
     }
+
+    Blockly.Blocks['responses'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(330);          // Set block color
+
+        this.appendDummyInput()
+          .appendField("responses");
+        this.appendStatementInput('RESPONSES');
+      }
+    }
+
+    Blockly.Blocks['response_status'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(330);          // Set block color
+
+        this.appendDummyInput()
+          .appendField(new Blockly.FieldTextInput('200'), 'RESPONSE')
+          .appendField("(application/json)");
+        this.appendDummyInput()
+          .appendField("description")
+          .appendField(new Blockly.FieldTextInput('Success'), 'RESPONSE_DESCRIPTION');
+        this.appendStatementInput('RESPONSE');
+
+      }
+    }
+
+    Blockly.Blocks['schema'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(30);          // Set block color
+
+        this.appendDummyInput()
+          .appendField("schema");
+        this.appendStatementInput('SCHEMA');
+      }
+    }
+
+    Blockly.Blocks['schema_simple'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(30);          // Set block color
+
+        this.appendDummyInput()
+          .appendField(new Blockly.FieldTextInput('schema-name'), 'SCHEMA_SIMPLE_NAME');
+        this.appendDummyInput()
+          .appendField("type")
+          .appendField(new Blockly.FieldDropdown([
+              ["string", 'ITEM1'],
+              ["integer", 'ITEM2'],
+              ["number", 'ITEM3']
+          ]), 'SCHEMA_SIMPLE_TYPE');
+        this.appendDummyInput()
+          .appendField("description")
+          .appendField(new Blockly.FieldTextInput('All about this parameter, markup supported'), 'SCHEMA_SIMPLE_DESCRIPTION');
+        this.appendDummyInput()
+          .appendField("example")
+          .appendField(new Blockly.FieldTextInput('meaningful example value goes here'), 'SCHEMA_SIMPLE_EXAMPLE');
+      }
+    }
+
+    Blockly.Blocks['schema_ref'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(65);          // Set block color
+
+        this.appendDummyInput()
+          .appendField(new Blockly.FieldTextInput('schema-name'), 'SCHEMA_REF_NAME');
+        this.appendDummyInput()
+          .appendField("$ref")
+          .appendField(new Blockly.FieldTextInput('#/components/schema/name'), 'SCHEMA_REF_TARGET');
+      }
+    }
+
+    Blockly.Blocks['components'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(65);          // Set block color
+
+        this.appendDummyInput()
+          .appendField("components");
+        this.appendDummyInput()
+          .appendField("  schemas");
+        this.appendStatementInput('COMPONENTS_SCHEMAS');
+        this.appendDummyInput()
+          .appendField("  parameters");
+        this.appendStatementInput('COMPONENTS_SCHEMAS');
+        this.appendDummyInput()
+          .appendField("  responses");
+        this.appendStatementInput('COMPONENTS_RESPONSES');
+      }
+    }
+
 
     // toolbox is the left hand nav structure
     var toolbox = {
@@ -342,6 +547,18 @@
               {
                 "kind": "block",
                 "type": "license"
+              },
+              {
+                "kind": "block",
+                "type": "external_docs"
+              },
+              {
+                "kind": "block",
+                "type": "tags_list"
+              },
+              {
+                "kind": "block",
+                "type": "tag"
               }
             ]
           },
@@ -361,8 +578,60 @@
                 "kind": "block",
                 "type": "operation"
               },
+              {
+                "kind": "block",
+                "type": "operation_id"
+              },
+              {
+                "kind": "block",
+                "type": "operation_tags_list"
+              },
+              {
+                "kind": "block",
+                "type": "operation_tag"
+              },
+              {
+                "kind": "block",
+                "type": "parameters"
+              },
+              {
+                "kind": "block",
+                "type": "responses"
+              },
+              {
+                "kind": "block",
+                "type": "response_status"
+              },
             ]
           },
+          {
+            "kind": "category",
+            "name": "Schemas",
+            "contents": [
+              {
+                "kind": "block",
+                "type": "schema"
+              },
+              {
+                "kind": "block",
+                "type": "schema_simple"
+              },
+              {
+                "kind": "block",
+                "type": "schema_ref"
+              },
+            ]
+          },
+          {
+            "kind": "category",
+            "name": "Components",
+            "contents": [
+              {
+                "kind": "block",
+                "type": "components"
+              }
+            ]
+	  }
         ]
       }
     var apiWorkspace = Blockly.inject('blocklyDiv',
