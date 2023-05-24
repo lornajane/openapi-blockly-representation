@@ -62,6 +62,7 @@
           "block": {
             "type": "info",
             "id": "X;e}d5nlfcw~.)o|!y!I",
+            "collapsed": true,
             "inputs": {
               "INFO": {
                 "block": {
@@ -82,7 +83,7 @@
                           "type": "description",
                           "id": "aEr:ud`W`U~t,Dz2PrvP",
                           "fields": {
-                            "DESCRIPTION": "This API is modern, and will make your applications 67% more excellent.\n Write many words as you like here, markup is also supported."
+                            "DESCRIPTION": "This API is modern, and will make your applications 67% more excellent.\n Write as many words as you like here, markup is also supported."
                           },
                           "next": {
                             "block": {
@@ -112,31 +113,463 @@
             },
             "next": {
               "block": {
-                "type": "paths",
-                "id": "_1oX-oclDy-J]F7=p-h2",
-                "inputs": {
-                  "PATHS": {
-                    "block": {
-                      "type": "path_item",
-                      "id": "8ANd1-GXd}9$FtXa*)8|",
-                      "fields": {
-                        "PATH_ITEM": "/item/url/endpoint"
-                      },
-                      "inputs": {
-                        "PATH_ITEMS": {
-                          "block": {
-                            "type": "operation",
-                            "id": "$,]8s|#CRiz8RLKsI!w#",
-                            "fields": {
-                              "OPERATION_METHOD": "ITEM1"
-                            },
-                            "inputs": {
-                              "Operation": {
+                "type": "external_docs",
+                "id": "p_K[AqAh:%:]+aPq+N-r",
+                "collapsed": true,
+                "fields": {
+                  "EX_DOCS_URL": "https://example.com/docs",
+                  "EX_DOCS_DESCRTIPTION": "What sort of docs"
+                },
+                "next": {
+                  "block": {
+                    "type": "tags_list",
+                    "id": "BeJ$;hA0{D{Ff-v3A[@}",
+                    "collapsed": true,
+                    "inputs": {
+                      "TAGS": {
+                        "block": {
+                          "type": "tag",
+                          "id": "w[@,_/uhk8*L.j`t2!ri",
+                          "fields": {
+                            "TAG_NAME": "user",
+                            "TAG_DESCRIPTION": "Registered user operations"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "tag",
+                              "id": "u1cPONz:Z)4h{bM:BjuH",
+                              "fields": {
+                                "TAG_NAME": "accounts",
+                                "TAG_DESCRIPTION": "Customer accounts"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "paths",
+                        "id": "_1oX-oclDy-J]F7=p-h2",
+                        "inputs": {
+                          "PATHS": {
+                            "block": {
+                              "type": "path_item",
+                              "id": "8ANd1-GXd}9$FtXa*)8|",
+                              "fields": {
+                                "PATH_ITEM": "/item/endpoint"
+                              },
+                              "inputs": {
+                                "PATH_ITEMS": {
+                                  "block": {
+                                    "type": "operation",
+                                    "id": "$,]8s|#CRiz8RLKsI!w#",
+                                    "fields": {
+                                      "OPERATION_METHOD": "ITEM1"
+                                    },
+                                    "inputs": {
+                                      "Operation": {
+                                        "block": {
+                                          "type": "operation_id",
+                                          "id": "?4G2}g2dep1;w*kDF|HQ",
+                                          "fields": {
+                                            "OPERATION_ID": "getItem"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "description",
+                                              "id": "A^I43f1He_OuDa;Z9q4d",
+                                              "fields": {
+                                                "DESCRIPTION": "Use this endpoint to achieve great things"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "operation_tags_list",
+                                                  "id": "w17uRka*P#!oJ1FeUq_y",
+                                                  "inputs": {
+                                                    "OPERATION_TAGS": {
+                                                      "block": {
+                                                        "type": "operation_tag",
+                                                        "id": "/t%PZ$O+,K?+l}q9EV[[",
+                                                        "fields": {
+                                                          "TAG_NAME": "user"
+                                                        },
+                                                        "inputs": {
+                                                          "OPERATION_TAGS": {
+                                                            "block": {
+                                                              "type": "operation_tag",
+                                                              "id": "K/9BH+JN$T41iDRygyz0",
+                                                              "fields": {
+                                                                "TAG_NAME": "accounts"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "responses",
+                                                      "id": "m871{0QJv.)4r:9Xl+K#",
+                                                      "inputs": {
+                                                        "RESPONSES": {
+                                                          "block": {
+                                                            "type": "response_status",
+                                                            "id": ")%SIgY87Iwm]pdevHXJ}",
+                                                            "fields": {
+                                                              "RESPONSE": "200",
+                                                              "RESPONSE_DESCRIPTION": "Success"
+                                                            },
+                                                            "inputs": {
+                                                              "RESPONSE": {
+                                                                "block": {
+                                                                  "type": "schema",
+                                                                  "id": "49iNnBjN|4D*q=B{8?uK",
+                                                                  "inputs": {
+                                                                    "SCHEMA": {
+                                                                      "block": {
+                                                                        "type": "schema_simple",
+                                                                        "id": "^ssbg-nZF[i8sE](TmTO",
+                                                                        "fields": {
+                                                                          "SCHEMA_SIMPLE_NAME": "message",
+                                                                          "SCHEMA_SIMPLE_TYPE": "ITEM1",
+                                                                          "SCHEMA_SIMPLE_DESCRIPTION": "The message returned by the call",
+                                                                          "SCHEMA_SIMPLE_EXAMPLE": "You are great"
+                                                                        },
+                                                                        "next": {
+                                                                          "block": {
+                                                                            "type": "schema_simple",
+                                                                            "id": "Q)CZ}K?Y]Z5#q.%Fb{.6",
+                                                                            "fields": {
+                                                                              "SCHEMA_SIMPLE_NAME": "event_id",
+                                                                              "SCHEMA_SIMPLE_TYPE": "ITEM2",
+                                                                              "SCHEMA_SIMPLE_DESCRIPTION": "Identifier for this unique event",
+                                                                              "SCHEMA_SIMPLE_EXAMPLE": "10000085732458"
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
                                 "block": {
-                                  "type": "description",
-                                  "id": "A^I43f1He_OuDa;Z9q4d",
+                                  "type": "path_item",
+                                  "id": "Y$M7]wsuM`i7HedT@3eq",
                                   "fields": {
-                                    "DESCRIPTION": "This API is modern, and will make your applications 67% more excellent.\n Write many words as you like here, markup is also supported."
+                                    "PATH_ITEM": "/things/another/url"
+                                  },
+                                  "inputs": {
+                                    "PATH_ITEMS": {
+                                      "block": {
+                                        "type": "operation",
+                                        "id": "fmwnDiQOV5424s]Mzh!6",
+                                        "fields": {
+                                          "OPERATION_METHOD": "ITEM1"
+                                        },
+                                        "inputs": {
+                                          "Operation": {
+                                            "block": {
+                                              "type": "operation_id",
+                                              "id": "{S(bdpK$1Z^RUHq+48:$",
+                                              "fields": {
+                                                "OPERATION_ID": "getThings"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "description",
+                                                  "id": "KJNZ,KdXkZ,1vd-*kZm1",
+                                                  "fields": {
+                                                    "DESCRIPTION": "Use this endpoint to achieve great things"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "operation_tags_list",
+                                                      "id": "ss$H_HfzN;(WBK_y}).k",
+                                                      "inputs": {
+                                                        "OPERATION_TAGS": {
+                                                          "block": {
+                                                            "type": "operation_tag",
+                                                            "id": "cd~+eW{.XXD+`d/jxi_D",
+                                                            "fields": {
+                                                              "TAG_NAME": "user"
+                                                            },
+                                                            "inputs": {
+                                                              "OPERATION_TAGS": {
+                                                                "block": {
+                                                                  "type": "operation_tag",
+                                                                  "id": "_KR,Lxb+P!l1}j+JcFq~",
+                                                                  "fields": {
+                                                                    "TAG_NAME": "accounts"
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "responses",
+                                                          "id": "Hrk)S-){G=n*EE(%ecWY",
+                                                          "inputs": {
+                                                            "RESPONSES": {
+                                                              "block": {
+                                                                "type": "response_status",
+                                                                "id": "7_h)=:s7J{uB{QkWy{tU",
+                                                                "fields": {
+                                                                  "RESPONSE": "200",
+                                                                  "RESPONSE_DESCRIPTION": "Success"
+                                                                },
+                                                                "inputs": {
+                                                                  "RESPONSE": {
+                                                                    "block": {
+                                                                      "type": "schema",
+                                                                      "id": "*aGbdd,dpnCw],{S#y}Z",
+                                                                      "inputs": {
+                                                                        "SCHEMA": {
+                                                                          "block": {
+                                                                            "type": "schema_ref",
+                                                                            "id": "s)i?okH!DOy}[OJ}pB%7",
+                                                                            "fields": {
+                                                                              "SCHEMA_REF_NAME": "message",
+                                                                              "SCHEMA_REF_TARGET": "#/components/schema/message"
+                                                                            },
+                                                                            "next": {
+                                                                              "block": {
+                                                                                "type": "schema_ref",
+                                                                                "id": "vq?%=GDBHY0J!0`xalex",
+                                                                                "fields": {
+                                                                                  "SCHEMA_REF_NAME": "event_id",
+                                                                                  "SCHEMA_REF_TARGET": "#/components/schema/event_id"
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "operation",
+                                            "id": "_dMIwl3;1z`L7eMuhav7",
+                                            "collapsed": true,
+                                            "fields": {
+                                              "OPERATION_METHOD": "ITEM2"
+                                            },
+                                            "inputs": {
+                                              "Operation": {
+                                                "block": {
+                                                  "type": "operation_id",
+                                                  "id": "A;3Me/GSauz0F}ll8O-S",
+                                                  "fields": {
+                                                    "OPERATION_ID": "createThing"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "description",
+                                                      "id": "ysH!=jHI_@P^Tr]!hhrA",
+                                                      "fields": {
+                                                        "DESCRIPTION": "Use this endpoint to achieve great things"
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "operation_tags_list",
+                                                          "id": "H1aBKlI;Eb*7g^?RN$#S",
+                                                          "inputs": {
+                                                            "OPERATION_TAGS": {
+                                                              "block": {
+                                                                "type": "operation_tag",
+                                                                "id": ",04wIb~wG_?x[$T%TBIX",
+                                                                "fields": {
+                                                                  "TAG_NAME": "user"
+                                                                },
+                                                                "inputs": {
+                                                                  "OPERATION_TAGS": {
+                                                                    "block": {
+                                                                      "type": "operation_tag",
+                                                                      "id": "|RO*3^@$;2A!yO]Fq3P=",
+                                                                      "fields": {
+                                                                        "TAG_NAME": "accounts"
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "responses",
+                                                              "id": "e@0eW+/=5y-*LIf8Mbyi",
+                                                              "inputs": {
+                                                                "RESPONSES": {
+                                                                  "block": {
+                                                                    "type": "response_status",
+                                                                    "id": "bG4aSQfei[!1N($q}f,3",
+                                                                    "fields": {
+                                                                      "RESPONSE": "200",
+                                                                      "RESPONSE_DESCRIPTION": "Success"
+                                                                    },
+                                                                    "inputs": {
+                                                                      "RESPONSE": {
+                                                                        "block": {
+                                                                          "type": "schema",
+                                                                          "id": "i`6e%l[f7V)W0.SlrHqR",
+                                                                          "inputs": {
+                                                                            "SCHEMA": {
+                                                                              "block": {
+                                                                                "type": "schema_simple",
+                                                                                "id": "EMa4l3xTKx#mg|._?@pQ",
+                                                                                "fields": {
+                                                                                  "SCHEMA_SIMPLE_NAME": "message",
+                                                                                  "SCHEMA_SIMPLE_TYPE": "ITEM1",
+                                                                                  "SCHEMA_SIMPLE_DESCRIPTION": "The message returned by the call",
+                                                                                  "SCHEMA_SIMPLE_EXAMPLE": "You are great"
+                                                                                },
+                                                                                "next": {
+                                                                                  "block": {
+                                                                                    "type": "schema_simple",
+                                                                                    "id": "%6gZ@G[`cxXK`qO,d(FN",
+                                                                                    "fields": {
+                                                                                      "SCHEMA_SIMPLE_NAME": "event_id",
+                                                                                      "SCHEMA_SIMPLE_TYPE": "ITEM2",
+                                                                                      "SCHEMA_SIMPLE_DESCRIPTION": "Identifier for this unique event",
+                                                                                      "SCHEMA_SIMPLE_EXAMPLE": "10000085732458"
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "components",
+                            "id": "^;zx8=^h=?{7t[!asi}{",
+                            "inputs": {
+                              "COMPONENTS_SCHEMAS": {
+                                "block": {
+                                  "type": "schema_simple",
+                                  "id": "nph@7$s^1cVM,g2w$?nV",
+                                  "fields": {
+                                    "SCHEMA_SIMPLE_NAME": "message",
+                                    "SCHEMA_SIMPLE_TYPE": "ITEM1",
+                                    "SCHEMA_SIMPLE_DESCRIPTION": "The message returned by the call",
+                                    "SCHEMA_SIMPLE_EXAMPLE": "You are great"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "schema_simple",
+                                      "id": "E@;]O:dQ_/03k`nW!sl`",
+                                      "fields": {
+                                        "SCHEMA_SIMPLE_NAME": "event_id",
+                                        "SCHEMA_SIMPLE_TYPE": "ITEM2",
+                                        "SCHEMA_SIMPLE_DESCRIPTION": "Identifier for this unique event",
+                                        "SCHEMA_SIMPLE_EXAMPLE": "10000085732458"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "COMPONENTS_RESPONSES": {
+                                "block": {
+                                  "type": "response_status",
+                                  "id": "FL`NT[.7##n#:4u?/S?O",
+                                  "fields": {
+                                    "RESPONSE": "200",
+                                    "RESPONSE_DESCRIPTION": "Success"
+                                  },
+                                  "inputs": {
+                                    "RESPONSE": {
+                                      "block": {
+                                        "type": "schema",
+                                        "id": "f=VH^JQ}06W~Bsq;+V0P",
+                                        "collapsed": true,
+                                        "inputs": {
+                                          "SCHEMA": {
+                                            "block": {
+                                              "type": "schema_simple",
+                                              "id": "N81*%!pG^8BsLSI`:eyh",
+                                              "fields": {
+                                                "SCHEMA_SIMPLE_NAME": "message",
+                                                "SCHEMA_SIMPLE_TYPE": "ITEM1",
+                                                "SCHEMA_SIMPLE_DESCRIPTION": "The message returned by the call",
+                                                "SCHEMA_SIMPLE_EXAMPLE": "You are great"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "schema_simple",
+                                                  "id": "i[!QBnB[58;uaJ9LJs;m",
+                                                  "fields": {
+                                                    "SCHEMA_SIMPLE_NAME": "event_id",
+                                                    "SCHEMA_SIMPLE_TYPE": "ITEM2",
+                                                    "SCHEMA_SIMPLE_DESCRIPTION": "Identifier for this unique event",
+                                                    "SCHEMA_SIMPLE_EXAMPLE": "10000085732458"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
                                   }
                                 }
                               }
