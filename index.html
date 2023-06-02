@@ -49,6 +49,19 @@
       }
     }
     
+    Blockly.Blocks['externalDocs_summary'] = {
+      init: function() {
+        this.setPreviousStatement(true); 
+        this.setNextStatement(true); 
+        this.setOutput(false);        // Disable output connector
+        this.setColour(200);          // Set block color
+
+        this.appendDummyInput()
+            .appendField("externalDocs");
+
+      }
+    }
+    
     Blockly.Blocks['tags_summary'] = {
       init: function() {
         this.setPreviousStatement(true); 
@@ -80,7 +93,7 @@
         this.setPreviousStatement(true); 
         this.setNextStatement(true); 
         this.setOutput(false);        // Disable output connector
-        this.setColour(15);          // Set block color
+        this.setColour(5);          // Set block color
 
         this.appendDummyInput()
             .appendField("security");
@@ -183,7 +196,7 @@
         this.setColour(200);          // Set block color
         this.appendDummyInput()
             .appendField("description")
-            .appendField(new Blockly.FieldMultilineInput('This API is modern, and will make your applications 67% more excellent.\n Write many words as you like here, markup is also supported.'), 'DESCRIPTION');
+            .appendField(new Blockly.FieldMultilineInput('This API is modern, and will make your applications 67% more excellent.\n Write as many words as you like here, markup is also supported.'), 'DESCRIPTION');
       }
     }
 
@@ -202,13 +215,14 @@
       init: function() {
         this.setPreviousStatement(true); 
         this.setNextStatement(true); 
+        this.setColour(200);          // Set block color
         this.appendDummyInput()
             .appendField("externalDocs")
         this.appendDummyInput()
-            .appendField("url")
+            .appendField("  url")
             .appendField(new Blockly.FieldTextInput('https://example.com/docs'), 'EX_DOCS_URL');
         this.appendDummyInput()
-            .appendField("description")
+            .appendField("  description")
             .appendField(new Blockly.FieldTextInput('What sort of docs'), 'EX_DOCS_DESCRTIPTION');
       }
     }
@@ -485,6 +499,10 @@
               {
                 "kind": "block",
                 "type": "info_summary"
+              },
+              {
+                "kind": "block",
+                "type": "externalDocs_summary"
               },
               {
                 "kind": "block",
