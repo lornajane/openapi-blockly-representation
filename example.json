@@ -5,36 +5,42 @@
       {
         "type": "openapi_summary",
         "id": "ZDnzSINV(x1tszDy!P0v",
-        "x": 605,
-        "y": 49,
+        "x": 797,
+        "y": -55,
         "next": {
           "block": {
             "type": "info_summary",
             "id": "c2vOX;B@ydjfZ5(#_%Q1",
             "next": {
               "block": {
-                "type": "security_summary",
-                "id": "1[o})F}5=7=1fG0zi.rz",
+                "type": "externalDocs_summary",
+                "id": "PM5M[UW)K^vD0a@-Z0|j",
                 "next": {
                   "block": {
-                    "type": "servers_summary",
-                    "id": "]/?G3J,0d:*5R]snKv8g",
+                    "type": "security_summary",
+                    "id": "1[o})F}5=7=1fG0zi.rz",
                     "next": {
                       "block": {
-                        "type": "tags_summary",
-                        "id": "`Is=YgK6~(GwqvX+;a0y",
+                        "type": "servers_summary",
+                        "id": "]/?G3J,0d:*5R]snKv8g",
                         "next": {
                           "block": {
-                            "type": "paths_summary",
-                            "id": "]8!rq9=85pgVT1$LX/[3",
+                            "type": "tags_summary",
+                            "id": "`Is=YgK6~(GwqvX+;a0y",
                             "next": {
                               "block": {
-                                "type": "webhooks_summary",
-                                "id": "f4`-hUQ#n7l5hnfT0sNx",
+                                "type": "paths_summary",
+                                "id": "]8!rq9=85pgVT1$LX/[3",
                                 "next": {
                                   "block": {
-                                    "type": "components_summary",
-                                    "id": "p;J*A/l~9Gccgb2%8qM{"
+                                    "type": "webhooks_summary",
+                                    "id": "f4`-hUQ#n7l5hnfT0sNx",
+                                    "next": {
+                                      "block": {
+                                        "type": "components_summary",
+                                        "id": "p;J*A/l~9Gccgb2%8qM{"
+                                      }
+                                    }
                                   }
                                 }
                               }
@@ -115,7 +121,6 @@
               "block": {
                 "type": "external_docs",
                 "id": "p_K[AqAh:%:]+aPq+N-r",
-                "collapsed": true,
                 "fields": {
                   "EX_DOCS_URL": "https://example.com/docs",
                   "EX_DOCS_DESCRTIPTION": "What sort of docs"
@@ -164,6 +169,7 @@
                                   "block": {
                                     "type": "operation",
                                     "id": "$,]8s|#CRiz8RLKsI!w#",
+                                    "collapsed": true,
                                     "fields": {
                                       "OPERATION_METHOD": "ITEM1"
                                     },
@@ -282,6 +288,7 @@
                                       "block": {
                                         "type": "operation",
                                         "id": "fmwnDiQOV5424s]Mzh!6",
+                                        "collapsed": true,
                                         "fields": {
                                           "OPERATION_METHOD": "ITEM1"
                                         },
@@ -503,6 +510,7 @@
                           "block": {
                             "type": "components",
                             "id": "^;zx8=^h=?{7t[!asi}{",
+                            "collapsed": true,
                             "inputs": {
                               "COMPONENTS_SCHEMAS": {
                                 "block": {
